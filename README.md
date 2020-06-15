@@ -1,18 +1,22 @@
 # Drinkwater API
 
-API para monitorar quantas vezes o usuário bebeu água, escrito em PHP e SQLite3 sem uso de frameworks ou bibliotecas de terceiros.
-Seguindo padrão REST nas requisições, com entradas e saídas em formato JSON. 
+API para monitorar quantas vezes o usuário bebeu água, escrito em PHP e com banco de dados SQLite3 sem uso de frameworks ou bibliotecas de terceiros.
+Seguindo padrão REST, entradas e saídas em formato JSON. 
  
 
 ## ✅   Instalação
 
-Para instalar faça o download a partir de: https://github.com/marcreinan/drinkwater_api/archive/master.zip ou se você tiver o GIT e o PHP instalado em sua maquina, digite no terminal o seguinte comando dentro da pasta de sua preferência:
+Faça o download a partir do link: https://github.com/marcreinan/drinkwater_api/archive/master.zip ou se você tiver o GIT e o PHP instalado em sua maquina, digite no terminal o seguinte comando dentro da pasta de sua preferência:
 ```bash
 git clone https://github.com/marcreinan/drinkwater_api.git
 cd drinkwater_api
 php -S localhost:8000
 ```
-Para iniciar com um banco de dados sem registro, delete o arquivo ```db.sqlite3``` dentro da pasta ```v1```
+Para iniciar com um banco de dados sem registros base, delete o arquivo ```db.sqlite3``` dentro da pasta ```api/v1```
+
+## ☔   Dependências 
+
+Para correta execução desse projeto é necessário que você tenha instalado o PHP 5.5.8 e o driver SQLite3 para acesso ao banco de dados.
 
 ## 🚀   Tecnologias
 
@@ -26,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻   Endpoints
 
-A raiz da API se encontra em ```api/v1/```, os endpoints são inseridos a partir daqui. ex: ```http://localhost:8000/api/v1/users```
+O endereço raiz da API se encontra em ```api/v1/```, os endpoints são inseridos a partir daqui. ex: ```http://localhost:8000/api/v1/login```
 
 | URL   | Método | Entrada | Saída | Headers | Ação|
 |-------|--------|---------|-------|---------|-----|
