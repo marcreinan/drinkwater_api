@@ -6,6 +6,7 @@
 class Login{
 	private $email; //email do usuário informado
 	private $password; //senha informada
+	private $db; //instância do banco de dados
 
 	function __construct($email = '', $password = ''){ //construtor
 		$this->db = ConnectionDB::getInstance(); //Pega a instância do banco de dados
