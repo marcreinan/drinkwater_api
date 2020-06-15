@@ -45,7 +45,7 @@ SQL;
 
       } catch (PDOException $e) { //Caso aconteceça algum erro no banco
         http_response_code(400);  //envia codigo 400 Bad Request
-        $e->getMessage(); //envia a msg de erro
+        print $e->getMessage(); //envia a msg de erro
       }
     }
 
