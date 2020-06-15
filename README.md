@@ -40,7 +40,7 @@ O endereço raiz da API se encontra em ```api/v1/```, os endpoints são inserido
 |/users|GET|   |(array de usuários)|Token* |Obtém todos os usuários
 |/users/:id|PUT|email, name, password|   |Token* |Editar o seu próprio usuário 
 |/users/:id|DELETE|||Token* |Deleta o usuário 
-|/users/:id/drink|POST|drink_ml* |   |Token* |Incrementa o contador de quantas vezes bebeu água
+|/users/:id/drink|POST|drink_ml* |id, name, email, drink_counter|Token* |Incrementa o contador de quantas vezes bebeu água
 |/users/page/:page|GET|   |(array de usuários)|Token* |Obtém os usuários em páginas de 5 registros
 |/users/:id/history|GET|   |(array de registros de usuários)|Token* |Obtém os registros de um usuário
 |/users/:id/history/asc|GET|   |(array de registros de usuários)|Token* |Obtém os registros de um usuário com ordenação ascendente
