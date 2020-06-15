@@ -6,12 +6,13 @@ Seguindo padrão REST nas requisições, com entradas e saídas em formato JSON.
 
 ## ✅   Instalação
 
-Para instalar faça o download a partir de: https://github.com/marcreinan/drinkwater_api/archive/master.zip ou se você tiver o GIT instalado em sua maquina, digite no terminal o seguinte comando dentro da pasta de sua preferência:
+Para instalar faça o download a partir de: https://github.com/marcreinan/drinkwater_api/archive/master.zip ou se você tiver o GIT e o PHP instalado em sua maquina, digite no terminal o seguinte comando dentro da pasta de sua preferência:
 ```bash
 git clone https://github.com/marcreinan/drinkwater_api.git
 cd drinkwater_api
 php -S localhost:8000
 ```
+Para iniciar com um banco de dados sem registro, delete o arquivo ```db.sqlite3``` dentro da pasta ```v1```
 
 ## 🚀   Tecnologias
 
@@ -25,7 +26,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻   Endpoints
 
-A raiz da API se encontra em ``` api/v1/```, os endpoints são inseridos a partir daqui. ex: ```http://localhost:8000/api/v1/users```
+A raiz da API se encontra em ```api/v1/```, os endpoints são inseridos a partir daqui. ex: ```http://localhost:8000/api/v1/users```
 
 | URL   | Método | Entrada | Saída | Headers | Ação|
 |-------|--------|---------|-------|---------|-----|

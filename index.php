@@ -1,6 +1,7 @@
 
 <html>
 	<head>
+		<meta charset="utf-8"/>
 		<title>Drink Water API</title>
 		<style type="text/css">
 			body{
@@ -13,31 +14,12 @@
 				left:50%;
 				margin-left:-100px;
 			}
-			div{
-				margin-top: 10px;
-			}
 		</style>
 	</head>
 	<body>
 		<div id="container">
-			<h2>Cadastrar novo usuário</h2>
-			<form method="POST" action="api/users">
-				<div>
-					<label for="name">Name:</label>
-					<input type="text" name="name" id="name" placeholder="Name"/> 
-				</div>
-				<div>
-					<label for="age">Email:</label>
-					<input type="text" name="email" id="email" placeholder="Email"/>
-				</div>
-				<div>
-					<label for="age">Password:</label>
-					<input type="text" name="password" id="password" placeholder="password"/>
-				</div>
-				<div>
-					<input type="submit" value="Send" name="btn"  /> 
-				</div>
-			</form>
+			<h1>Drinkwater API</h1>
+			Consulte a documentação completa <a target="_blank" href="https://github.com/marcreinan/drinkwater_api/blob/master/README.md">AQUI</a>
 		</div>
 	</body>
 </html>
