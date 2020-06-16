@@ -31,40 +31,39 @@
 	$arr_json = array(); //inicia array de retorno de respostas
 
 	if (count($route) <= 4) { //verifica o tamanho da rota
-		if(!empty($route[0])){ //verifica se existe o recurso 
-			switch ($route[0]) { //escolhe o recurso com base na rota
-				//ROTA /login
-				case 'login':
-					if($method == 'POST'){ //verifica se o metódo é POST
-						include('login.class.php'); //inclue a classe de login
-						$login = new Login($email,$password); //inicia um novo objeto Login
-						$arr_json = $login->login($route); //passa os parametros da rota
-					}else{ //caso não seja, mostra msg de erro
-						http_response_code(501);
-						$arr_json = array('msg' => "Método HTTP inválido para essa rota");
-					}
-				break;
-			//ROTA /users	
-			case 'users':
-					include('user.class.php'); //inclue a classe users
-					$user = new User($name,$email,$password,$drink_ml); //inicia um novo objeto User
-					$arr_json = $user->verifyMethod($method,$route); //verifica o metódo e a rota
-				break;				
-			//ROTA 404 para requisições indesejadas
-			default:
-			http_response_code(404);
-			$arr_json = array('status' => 404);
+	  if(!empty($route[0])){ //verifica se existe o recurso 
+	    switch ($route[0]) { //escolhe o recurso com base na rota
+	      //ROTA /login
+	      case 'login':
+		if($method == 'POST'){ //verifica se o metódo é POST
+		  include('login.class.php'); //inclue a classe de login
+		  $login = new Login($email,$password); //inicia um novo objeto Login
+		  $arr_json = $login->login($route); //passa os parametros da rota
+		}else{ //caso não seja, mostra msg de erro
+		  http_response_code(501);
+		  $arr_json = array('msg' => "Método HTTP inválido para essa rota");
+		}
 		break;
-	}
-	//ROTA PADRÃO	
-}else{
-	$arr_json = array('msg' => "Bem vindo(a) ao DrinkWater API"); //msg de boas vindas
-}
-//ROTA 404 para requisições indesejadas
-}else{
-	http_response_code(404);
+	      //ROTA /users	
+	      case 'users':
+		include('user.class.php'); //inclue a classe users
+		$user = new User($name,$email,$password,$drink_ml); //inicia um novo objeto User
+		$arr_json = $user->verifyMethod($method,$route); //verifica o metódo e a rota
+		break;				
+	      //ROTA 404 para requisições indesejadas
+	      default:
+		http_response_code(404);
 		$arr_json = array('status' => 404);
-	}
-
-	echo json_encode($arr_json); //envia as respostas JSON 
+		break;
+	    }
+	  //ROTA PADRÃO	
+          }else{
+	    $arr_json = array('msg' => "Bem vindo(a) ao DrinkWater API"); //msg de boas vindas
+          }
+        //ROTA 404 para requisições indesejadas
+      }else{
+	http_response_code(404);
+	$arr_json = array('status' => 404);
+      }
+    echo json_encode($arr_json); //envia as respostas JSON 
 ?>
